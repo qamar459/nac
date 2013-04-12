@@ -43,7 +43,9 @@ table {
 	border-spacing: 0;
 }
 /* Reset CSS End */
+h1{
 
+}
 .pre-header-wrapper{
 	background: url(images/bg-pre-header.png) repeat-x top left;
 	width: 100%;
@@ -415,5 +417,49 @@ table {
 	margin-left: 32px;
 }
 
+
+
+/*//////Register Page CSS//////*/
+
+.progress{
+	width:960px;
+	height:51px;
+	float:left;
+	position:relative;
+	margin-top:-40px;
+	z-index:-1;
+}
+.register_heading{
+	width:100%;
+	float:left;
+	margin-left:50px;
+}
+.register_box{
+	width:100%;
+	float:left;
+	margin-top:25px;
+}
+.register_box .register_steps{
+	width:250px;
+	float:left;
+	position:relative;
+}
+.register_box .register_steps ul{
+	width:100%;
+	float:left;
+}
+.register_box .register_steps ul li{
+	width:80%;
+	float:left;
+	position:relative;
+	padding-left:50px;	
+}
+.register_box .register_steps ul li a{
+	width:80%;
+	display:block;
+	padding:20px 0;
+	font-size:18px;
+	font-family: "economicaregular";
+}
 
 
