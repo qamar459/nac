@@ -1,0 +1,873 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Nac Website</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+		$('.scnd_tab').css('display', 'none' );
+		$('.third_tab').css('display', 'none' );
+		$('.forth_tab').css('display', 'none' );
+		$('#first').addClass('active');
+		$('form').attr('id', 'register1');
+		document.getElementById('prog').innerHTML = "<img src='images/first_progress.png' />";
+		document.getElementById('submit').innerHTML = "<input type='button' name='submit' value='Next' class='sbmt_btn' id='submit-btn1' />";
+		//2nd tab start
+		$('#submit-btn1').click(function(){
+			$('.first_tab').css('display', 'none' );
+			$('.scnd_tab').css('display', 'block' );
+			$('.third_tab').css('display', 'none' );
+			$('.forth_tab').css('display', 'none' );
+			$('#first').removeClass('active');
+			$('#scnd').addClass('active');
+			$('form').removeAttr('id','register1');
+			$('form').attr('id', 'register2');
+			document.getElementById('prog').innerHTML = "<img src='images/scnd_progress.png' />";
+			document.getElementById('submit').innerHTML = "<input type='button' name='submit' value='Next' class='sbmt_btn' id='submit-btn2' />";
+			
+		});//end click
+		
+		//3rd tab start
+		$('#submit-btn2').click(function(){
+			
+			$('.first_tab').css('display', 'none' );
+			$('.scnd_tab').css('display', 'none' );
+			$('.third_tab').css('display', 'block' );
+			$('.forth_tab').css('display', 'none' );
+			$('#scnd').removeClass('active');
+			$('#third').addClass('active');
+			
+			document.getElementById('prog').innerHTML = "<img src='images/third_progress.png' />";
+			document.getElementById('submit').innerHTML = "<input type='button' name='submit' value='Next' class='sbmt_btn' id='submit-btn3' />";
+			
+		});//end click
+		
+		//4th tab start
+		$('#submit-btn3').click(function(){
+			$('.first_tab').css('display', 'none' );
+			$('.scnd_tab').css('display', 'none' );
+			$('.third_tab').css('display', 'none' );
+			$('.forth_tab').css('display', 'block' );
+			$('#third').removeClass('active');
+			$('#forth').addClass('active');
+			$('form').attr('id', 'register3');
+			document.getElementById('prog').innerHTML = "<img src='images/forth_progress.png' />";
+			document.getElementById('submit').innerHTML = "<input type='button' name='submit' value='Next' class='sbmt_btn' id='submit-btn4' />";
+			
+		});//end click
+		
+});//end ready
+
+</script>
+</head>
+<body>
+<!-- Pre Header Wrapper -->
+<div class="pre-header-wrapper">
+	<div class="pre-header">
+    	<div class="twitter-feeds">
+        	<p>Recent Tweets: </p>
+        </div>
+        <div class="nav-pre-header">
+        	<ul>
+            	<li><span class="ico-chat"></span><a href="#">Live Chat</a></li>
+                <li><a href="#">Login</a></li>
+                <li style="border:0px;"><a href="#">Register</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- End Pre Header Wrapper -->
+<!-- Header Wrapper Start -->
+<div class="header-wrapper">
+	<div class="header">
+    	<nav>
+        	<ul>
+            	<li style="padding-left:0px;"><a href="#">Why become A Travel nurse?</a></li>
+                <li><a href="#">Nurses</a></li>
+                <li><a href="#">Midwives</a></li>
+                <li><a href="#">Vacancies</a></li>
+                <li><a href="#">TESTIMONIALS</a></li>
+                <li style="padding-right:0px;"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+        	<a href="#"><img src="images/logo.png" alt="" /></a>
+        </div>
+        
+    </div>
+</div>
+<!-- End Header Wrapper -->
+<!-- Main Content Wrapper -->
+<div class="main-content-wrapper">
+	<div class="main-content">
+    		<!-- progress  Start -->
+        	<div class="progress" id="prog">
+            	
+            </div>
+        	<!-- progress  End -->
+        	<!-- Register Heading start-->
+        	<div class="register_heading">
+            	<h1>Register with Nurse a Call</h1>
+                <p>Register your interest today to become a part of the Nurse at Call family of travel nurses &amp; midwives. Be remunerated as a true professional and make a difference to the lives of those around you all whilst have the time of your life in Australia!</p>
+            </div>
+        	<!-- Register Heading  End -->
+            
+            <!-- Register Box start-->
+        	<div class="register_box">
+            	<div class="register_steps">
+                	<ul>
+                    	<li id="first"><a href="#">1. Your Details</a></li>
+                        <li id="scnd"><a href="#">2. Qualifications</a></li>
+                        <li id="third"><a href="#">3. Clinical Skills</a></li>
+                        <li id="forth"><a href="#">4. Review &amp; Submit</a></li>
+                        
+                    </ul>
+                </div>
+               	<div class="register_tabs_wrapper" id="register_wrapper">
+                	<form name="register" method="post">
+                    <div class="register_tabs">
+                        
+                        	<!-- 1st tab start-->
+                            <div class="first_tab">
+                                <div class="details_box">
+                                    <h2>Personal Details</h2>
+                                    <div class="fields_box">
+                                        <select name="title" class="dropdown_short">
+                                            <option value="">Title</option>
+                                            <option value="">Title</option>
+                                            <option value="">Title</option>
+                                            <option value="">Title</option>
+                                        </select>
+                                        <input type="text" name="firstName" placeholder="First Name" class="text_field" />
+                                        <input type="text" name="surName" placeholder="Surname" class="text_field" />
+                                    </div>
+                                    <div class="fields_box">
+                                        <label for="birthDate" class="label">Date of Birth</label>	
+                                        <select name="title" class="dropdown_short">
+                                            <option value="">Day</option>
+                                            <option value="">Day</option>
+                                            <option value="">Title</option>
+                                            <option value="">Title</option>
+                                        </select>
+                                        <span>/</span>
+                                        <select name="month" class="dropdown_medium">
+                                            <option value="">Month</option>
+                                            <option value="">month</option>
+                                            <option value="">month</option>
+                                            <option value="">month</option>
+                                        </select>
+                                        <span>/</span>
+                                        <select name="year" class="dropdown_short">
+                                            <option value="">year</option>
+                                            <option value="">year</option>
+                                            <option value="">year</option>
+                                            <option value="">year</option>
+                                        </select>
+                                    </div>
+                                    
+                                    
+                                </div>
+                                <!-- personal Details end-->
+                                
+                                <!-- Contact Details-->
+                                <div class="details_box">
+                                    <h2>Contact Details</h2>
+                                    <div class="fields_box">
+                                        
+                                        <input type="text" name="phoneNumber" placeholder="Preferred Phone Number" class="text_field single" />
+                                        <input type="text" name="altPhoneNumber" placeholder="Alternative Phone Number" class="text_field single" />
+                                        <span class="optional">Optional</span>
+                                        <input type="text" name="emailAddress" placeholder="Email Address" class="text_field single" />
+                                       
+                                    </div>
+                                   
+                                
+                                </div>
+                                <!-- Contact Details end-->
+                                
+                                <!-- living Details-->
+                                <div class="details_box">
+                                    <h2>Where Do You Live?</h2>
+                                    <div class="fields_box">
+                                        
+                                        <input type="text" name="number" placeholder="Number" class="text_field_short" />
+                                        <input type="text" name="street" placeholder="Street" class="text_field_long" />
+                                        
+                                    </div>
+                                    
+                                    <div class="fields_box">
+                                        <input type="text" name="suburb" placeholder="Suburb" class="text_field sub_state" />
+                                        <input type="text" name="state" placeholder="State" class="text_field sub_state" />
+                                        
+                                    </div>
+                                    
+                                    <div class="fields_box">
+                                        <input type="text" name="postcode" placeholder="Postcode" class="text_field sub_state" />
+                                        <select style="padding:9px; width:275px;" name="country" class="text_field sub_state">
+                                            <option value="">Country</option>
+                                            <option value="">Country</option>
+                                            <option value="">Country</option>
+                                        </select>
+                                        
+                                    </div>
+                                   
+                                
+                                </div>
+                                <!-- living Details end-->
+                                
+                                 <!-- position Details-->
+                                <div class="details_box" style="border-bottom:0;">
+                                    <h2>Whats the position your applying for?</h2>
+                                    <div class="fields_box">
+                                        
+                                       <select style="padding:9px; width:275px;" name="country" class="text_field sub_state">
+                                            <option value="">Select</option>
+                                            <option value="">Country</option>
+                                            <option value="">Country</option>
+                                        </select>
+                                       
+                                    </div>
+                                   
+                                
+                                </div>
+                                <!-- position Details end-->
+                                
+                            </div>
+                            <!-- 1st tab end-->
+                            <!-- 2nd tab start-->
+                            <div class="scnd_tab">
+                            	
+                            	 <!-- country qualification Details-->
+                                <div class="details_box">
+                                    <h2>Country of Qualifications</h2>
+                                    <div class="fields_box">
+                                        <label class="label label_text" for="Country of Nurse registration">Country of Nurse registration</label>
+                                        <select style="padding:9px; width:275px;" name="country_nurse" class="text_field sub_state">
+                                            <option value="">Select</option>
+                                            <option value="">Country</option>
+                                            <option value="">Country</option>
+                                        </select>
+                                    </div>
+                                    <div class="fields_box">
+                                         <label class="label label_text" for="countryCompletedTraining">Country where you completed your training</label>
+                                        <select style="padding:9px; width:275px;" name="country_training" class="text_field sub_state">
+                                            <option value="">Select</option>
+                                            <option value="">Country</option>
+                                            <option value="">Country</option>
+                                        </select>
+                                    </div>
+                                    
+                                    
+                                </div>
+                                <!-- country qualification Details end-->
+                                
+                                <!-- Experiance Details-->
+                                <div class="details_box">
+                                    <h2>Experience</h2>
+                                    <div class="fields_box">
+                                        
+                                         <label class="label label_text" for="yearsOfPostGRaduates">Years of post graduates experience</label>
+                                        <select style="padding:9px; width:275px;" name="country_nurse" class="text_field sub_state">
+                                            <option value="">Select</option>
+                                            <option value="">Country</option>
+                                            <option value="">Country</option>
+                                        </select>
+                                       
+                                    </div>
+                                   
+                                
+                                </div>
+                                <!-- Experiance Details end-->
+                                
+                                <!-- preffered locations-->
+                                <div class="details_box" style="border-bottom:0;">
+                                    <h2>Whats your preferred location to work?</h2>
+                                    <div class="fields_box">
+                                        
+                                        <select style="padding:9px; width:275px;" name="country_nurse" class="text_field sub_state">
+                                            <option value="">Select</option>
+                                            <option value="">Country</option>
+                                            <option value="">Country</option>
+                                        </select>
+                                        <span class="optional span_txt">We will attempt to put you in your preferred destination, Should there be no appropriate positions we will find the next best assignment for you.</span>
+                                        
+                                    </div>
+                            
+                                </div>
+                                <!-- preferred locations Details end-->
+
+                              
+                            </div>
+                            <!-- 2nd tab end-->
+                            <!-- 3rd tab start-->
+                            <div class="third_tab">
+                            	 <div class="details_box" style="border-bottom:0;">
+                                    <h2>Tell us your Clinical Skills <span>(select all appropriate)</span></h2>
+                                    <div class="fields_box">
+                                    	<div class="tick_box">
+                                            <div class="check_box">
+                                                <input type="checkbox" name="cannulation" class="check" value="1" />
+                                            </div>
+                                            <div class="check_label">
+                                                <label>Cannulation</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="tick_box">
+                                            <div class="check_box">
+                                                <input type="checkbox" name="cannulation" class="check" value="1" />
+                                            </div>
+                                            <div class="check_label">
+                                                <label>Paediatrics / Neonatal</label>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="fields_box">
+                                    	<div class="tick_box">
+                                            <div class="check_box">
+                                                <input type="checkbox" name="cannulation" class="check" value="1" />
+                                            </div>
+                                            <div class="check_label">
+                                                <label>Triage</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="tick_box">
+                                            <div class="check_box">
+                                                <input type="checkbox" name="cannulation" class="check" value="1" />
+                                            </div>
+                                            <div class="check_label">
+                                                <label>Cardiac</label>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="fields_box">
+                                    	<div class="tick_box">
+                                            <div class="check_box">
+                                                <input type="checkbox" name="cannulation" class="check" value="1" />
+                                            </div>
+                                            <div class="check_label">
+                                                <label>Venepuncture</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="tick_box">
+                                            <div class="check_box">
+                                                <input type="checkbox" name="cannulation" class="check" value="1" />
+                                            </div>
+                                            <div class="check_label">
+                                                <label>Community Nursing</label>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="fields_box">
+                                    	<div class="tick_box">
+                                            <div class="check_box">
+                                                <input type="checkbox" name="cannulation" class="check" value="1" />
+                                            </div>
+                                            <div class="check_label">
+                                                <label>Sutering</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="tick_box">
+                                            <div class="check_box">
+                                                <input type="checkbox" name="cannulation" class="check" value="1" />
+                                            </div>
+                                            <div class="check_label">
+                                                <label>Operating Theatre</label>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="fields_box">
+                                    	<div class="tick_box">
+                                            <div class="check_box">
+                                                <input type="checkbox" name="cannulation" class="check" value="1" />
+                                            </div>
+                                            <div class="check_label">
+                                                <label>Ventilator Competent</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="tick_box">
+                                            <div class="check_box">
+                                                <input type="checkbox" name="cannulation" class="check" value="1" />
+                                            </div>
+                                            <div class="check_label">
+                                                <label>Aged Care</label>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="fields_box">
+                                    	<div class="tick_box">
+                                            <div class="check_box">
+                                                <input type="checkbox" name="cannulation" class="check" value="1" />
+                                            </div>
+                                            <div class="check_label">
+                                                <label>Advanced Cardiac Life Support</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="tick_box">
+                                            <div class="check_box">
+                                                <input type="checkbox" name="cannulation" class="check" value="1" />
+                                            </div>
+                                            <div class="check_label">
+                                                <label>Midwifery</label>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="fields_box">
+                                    	<div class="tick_box">
+                                            <div class="check_box">
+                                                <input type="checkbox" name="cannulation" class="check" value="1" />
+                                            </div>
+                                            <div class="check_label">
+                                                <label>Defibrillation</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="tick_box">
+                                            <div class="check_box">
+                                                <input type="checkbox" name="cannulation" class="check" value="1" />
+                                            </div>
+                                            <div class="check_label">
+                                                <label>Medical</label>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="fields_box">
+                                    	<div class="tick_box">
+                                            <div class="check_box">
+                                                <input type="checkbox" name="cannulation" class="check" value="1" />
+                                            </div>
+                                            <div class="check_label">
+                                                <label>Scrub</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="tick_box">
+                                            <div class="check_box">
+                                                <input type="checkbox" name="cannulation" class="check" value="1" />
+                                            </div>
+                                            <div class="check_label">
+                                                <label>Mental Health</label>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="fields_box">
+                                    	<div class="tick_box">
+                                            <div class="check_box">
+                                                <input type="checkbox" name="cannulation" class="check" value="1" />
+                                            </div>
+                                            <div class="check_label">
+                                                <label>Anaesthetic</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="tick_box">
+                                            <div class="check_box">
+                                                <input type="checkbox" name="cannulation" class="check" value="1" />
+                                            </div>
+                                            <div class="check_label">
+                                                <label>Other (please specify below)</label>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                  
+                                    
+                                    <div class="fields_box">
+                                    	<div class="tick_box">
+                                            <div class="check_box">
+                                                <input type="checkbox" name="cannulation" class="check" value="1" />
+                                            </div>
+                                            <div class="check_label">
+                                                <label>X-rays</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="tick_box">
+                                        	
+                                            <div class="check_box">
+                                            </div>
+                                            
+                                            <div class="check_label">
+                                            
+                                            <input type="text" name="option1" class="text_field_option" />
+                                        	</div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="fields_box">
+                                    	<div class="tick_box">
+                                            <div class="check_box">
+                                                <input type="checkbox" name="cannulation" class="check" value="1" />
+                                            </div>
+                                            <div class="check_label">
+                                                <label>Delivery Suite</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="tick_box">
+                                            <div class="check_box">
+                                            </div>
+                                            
+                                            <div class="check_label">
+                                            
+                                            <input type="text" name="option2" class="text_field_option" />
+                                        	</div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="fields_box">
+                                    	<div class="tick_box">
+                                            <div class="check_box">
+                                                <input type="checkbox" name="cannulation" class="check" value="1" />
+                                            </div>
+                                            <div class="check_label">
+                                                <label>Intensive Care</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="tick_box">
+                                        	<div class="check_box">
+                                            </div>
+                                            
+                                            <div class="check_label">
+                                            
+                                            <input type="text" name="option3" class="text_field_option" />
+                                        	</div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="fields_box">
+                                    	<div class="tick_box">
+                                            <div class="check_box">
+                                                <input type="checkbox" name="cannulation" class="check" value="1" />
+                                            </div>
+                                            <div class="check_label">
+                                                <label>Accident &amp; Emergency</label>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                    </div>
+                                 
+                                </div>
+                            </div>
+                            <!-- 3rd tab end-->
+                            <!-- 4th tab start-->
+                            <div class="forth_tab">
+                            	<div class="details_box">
+                                    <h2 class="review_heading">Personal Details</h2>
+                                    <a href="#">Edit</a>
+                                    <div class="fields_box">
+                                    	
+                                            <div class="check_label_short">
+                                                <label>Name</label>
+                                            </div>
+                                         
+                                         
+                                            <div class="check_label_long">
+                                                <label>Mr Adam Jones</label>
+                                            </div>
+                                       
+                                  	</div>
+                                     <div class="fields_box">
+                                    	
+                                            <div class="check_label_short">
+                                                <label>DOB</label>
+                                            </div>
+                                         
+                                         
+                                            <div class="check_label_long">
+                                                <label>01/01/1900</label>
+                                            </div>
+                                       
+                                  	</div>
+                                     <div class="fields_box">
+                                    	
+                                            <div class="check_label_short">
+                                                <label>Primary Phone No.</label>
+                                            </div>
+                                         
+                                         
+                                            <div class="check_label_long">
+                                                <label>0412 345 678</label>
+                                            </div>
+                                       
+                                  	</div>
+                                     <div class="fields_box">
+                                    	
+                                            <div class="check_label_short">
+                                                <label>Secondary Phone NO.</label>
+                                            </div>
+                                         
+                                         
+                                            <div class="check_label_long">
+                                                <label>No. 0732 123 456</label>
+                                            </div>
+                                       
+                                  	</div>
+                                     <div class="fields_box">
+                                    	
+                                            <div class="check_label_short">
+                                                <label>Email</label>
+                                            </div>
+                                         
+                                         
+                                            <div class="check_label_long">
+                                                <label>info@sixdesignstudio.com</label>
+                                            </div>
+                                       
+                                  	</div>
+                                     <div class="fields_box">
+                                    	
+                                            <div class="check_label_short">
+                                                <label>Address</label>
+                                            </div>
+                                         
+                                         
+                                            <div class="check_label_long">
+                                                <label>200 Scottsdale Drive
+													Robina, Australia, 4226</label>
+                                            </div>
+                                       
+                                  	</div>
+                                        
+                                    
+                            	
+                            </div>
+                            
+                            
+                            
+                            <div class="details_box">
+                                    <h2 class="review_heading">Qualifications</h2>
+                                    <a href="#">Edit</a>
+                                    <div class="fields_box"> 
+                                            <div class="check_label_long">
+                                                <label>I'm registered as a Nurses in New Zealand</label>
+                                            </div>
+                                       
+                                  	</div>
+                                     <div class="fields_box">
+                                    	
+                                            <div class="check_label_long">
+                                                <label>I completed my medical training in New Zealand</label>
+                                            </div>
+                                       
+                                  	</div>
+                                     <div class="fields_box">
+                                 
+                                            <div class="check_label_long">
+                                                <label>I hold a New Zealand Passport</label>
+                                            </div>
+                                       
+                                  	</div>
+                                     <div class="fields_box">
+                              
+                                            <div class="check_label_long">
+                                                <label>I have 8 years Post Graduate experience</label>
+                                            </div>
+                                       
+                                  	</div>
+            
+                            </div>
+                            
+                            <div class="details_box" style="border-bottom:0;">
+                                    <h2 class="review_heading">Clinical Skills</h2>
+                                    <a href="#">Edit</a>
+                                     <div class="fields_box">
+                                    	
+                                            <div class="check_label_short">
+                                            	<img src="images/checked.png" alt="checked" width="18" height="15" />
+                                                <label>Paediatrics / neonatal</label>
+                                            </div>
+                                       
+                                  	</div>
+                                     <div class="fields_box">
+                                 
+                                            <div class="check_label_short">
+                                                <img src="images/checked.png" alt="checked" width="18" height="15" />
+                                                <label>Cardiac</label>
+                                            </div>
+                                       
+                                  	</div>
+                                     <div class="fields_box">
+                              
+                                            <div class="check_label_short">
+                                                <img src="images/checked.png" alt="checked" width="18" height="15" />
+                                                <label>Community nursing</label>
+                                            </div>
+                                       
+                                  	</div>
+                                    <div class="fields_box">
+                              
+                                            <div class="check_label_short">
+                                                <img src="images/checked.png" alt="checked" width="18" height="15" />
+                                                <label>perating theatre</label>
+                                            </div>
+                                       
+                                  	</div>
+                                    <div class="fields_box">
+                              
+                                            <div class="check_label_short">
+                                                <img src="images/checked.png" alt="checked" width="18" height="15" />
+                                                <label>Aged care</label>
+                                            </div>
+                                       
+                                  	</div>
+                                    <div class="fields_box">
+                              
+                                            <div class="check_label_short">
+                                                <img src="images/checked.png" alt="checked" width="18" height="15" />
+                                                <label>Midwifery</label>
+                                            </div>
+                                       
+                                  	</div>
+                                    <div class="fields_box">
+                              
+                                            <div class="check_label_short">
+                                                <img src="images/checked.png" alt="checked" width="18" height="15" />
+                                                <label>Medical</label>
+                                            </div>
+                                       
+                                  	</div>
+                                    <div class="fields_box">
+                              
+                                            <div class="check_label_short">
+                                                <img src="images/checked.png" alt="checked" width="18" height="15" />
+                                                <label>Mental health</label>
+                                            </div>
+                                       
+                                  	</div>
+                                    <div class="fields_box">
+                              
+                                            <div class="check_label_short long">
+                                                <img src="images/checked.png" alt="checked" width="18" height="15" />
+                                                <label>ther (please specify below)</label>
+                                            </div>
+                                       
+                                  	</div>
+            
+                            </div>
+                        
+                    </div>
+                    <!-- 4th tab end-->
+                 </div>
+                 <!--register_tabs end-->
+                    <!-- Chat Submit Box-->
+                    <div class="submit_box">
+                        
+                        <div class="chat">
+                            <a href="#">Live Chat with a recruiter</a>
+                        </div>
+                        
+                        <div class="btn" id="submit">
+                            
+                        </div>
+                    
+                    </div>
+                    <!-- Chat Submit Box End -->
+               
+            	</form>
+            </div>
+        </div>
+       	<!-- Register Box  End -->
+            
+        
+    </div>
+</div>
+<!-- End Main Content Wrapper -->
+<!-- Footer wapper Start -->
+<div class="footer-wrapper">
+	<div class="footer">
+    	<div class="columns">
+        	<h1>Affiliates</h1>
+            <ul>
+            	<li><a href="#">AHPRA</a></li>
+				<li><a href="#">NSW Health</a></li>
+                <li><a href="#">QLD Health</a></li>
+            </ul>
+        </div>
+        <div class="columns">
+        	<h1>General Interest</h1>
+            <ul>
+            	<li><a href="#">Weather</a></li>
+                <li><a href="#">Tourism Australia</a></li>
+                <li><a href="#">Public Holidays</a></li>
+                <li><a href="#">Currency</a></li>
+                <li><a href="#">Air Travel</a></li>
+                <li><a href="#">Education</a></li>
+            </ul>
+        </div>
+        <div class="columns">
+        	<h1>Useful Links</h1>
+            <ul>
+                <li><a href="#">Useful Links</a></li>
+                <li><a href="#">Immigration &amp; Citizenship </a></li>
+                <li><a href="#">Australian Tax Office</a></li>
+                <li><a href="#">OH&S</a></li>
+                <li><a href="#">Sun Superannuation</a></li>
+                <li><a href="#">Centaurus Wealth</a></li>
+                <li><a href="#">AMP</a></li>
+            </ul>        
+        </div>
+        <div class="last-column">
+        	<h1>AUS 1300 885 605 <span>toll free</span></h1>
+            <h1>NZ 0800 740 758 <span>toll free</span></h1>
+            <h2>International. +617 5578 7011 </h2>
+            <p class="chat-with">Live Chat with a recruiter</p>
+            <ul class="social-icons">
+            	<li><a href="#" class="fb">facebook</a></li>
+            	<li><a href="#" class="li">linkedin</a></li>
+                <li><a href="#" class="tw">twitter</a></li>
+                <li><a href="#" class="yh">yahoo</a></li>
+                <li><a href="#" class="go">google</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- End Footer Wrapper -->
+<!-- After Footer Wrapper Start -->
+<div class="after-footer-wrapper">
+	<div class="after-footer">
+    	<div class="copy">
+        	<a href="#">Privacy</a> | &copy; Copyright 2013 Nurse at Call Australia &amp; New Zealand.						          			
+        </div>
+        <div class="sponsors">
+        	<ul>
+            	<li><a href="#" class="rc-cr">RCSA Certified</a></li>
+                <li><a href="#" class="rc">RCSA</a></li>
+                <li><a href="#" class="ar">Anra</a></li>
+                <li><a href="#" class="ce">CERTEX</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- End After Footer Wrapper -->
+</body>
+</html>
